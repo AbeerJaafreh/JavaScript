@@ -516,3 +516,5 @@ function evenNumberEvenIndex(array) {
 var nums= [5,2,2,1,8,66,55,77,34,9,55,1];
 evenNumberEvenIndex(nums);
 //result [2, 8, 34]
+
+
