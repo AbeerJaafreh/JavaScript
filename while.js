@@ -64,7 +64,18 @@ Important: the continue condition should be [somthing !== 0]
 Ex: repeatStr("to",2); => "to to"
 Ex: repeatStr("to",4); => "to to to to"
 */
+function repeatStr(str,num)
+{   var newStr=str;
 
+    while(num>1)
+    {
+        newStr+=" "+str;
+        num--;
+    }
+    return newStr;
+    
+}
+repeatStr("to",2)
 
 /*
 4
@@ -74,6 +85,20 @@ and will return the sumation from the first number to the second number
 Ex: sum2(4, 5); => 4 + 5 => 9
 Ex: sum2(3, 6); => 3 + 4 + 5 + 6 => 18
 */
+
+function sum2(num1,num2)
+{
+var res=0;
+    while (num1<=num2)
+    {
+            res+=num1;
+            num1++
+
+    }
+return "sum(3,6) = "+res ;
+}
+sum2(3,6);
+
 
 
 /*
@@ -87,7 +112,19 @@ and return the first string number time
 Ex: repeatStr2("ro","cc"); => "ro ro"
 Ex: repeatStr2("ro","fff"); => "ro ro ro"
 */
-
+function  repeatStr2(str1,str2)
+{
+var newStr=str1;
+var len=str2.length;
+    while(len>0)
+    {
+        newStr+=" "+str;
+        len--;
+        
+    }
+    return newStr;
+}
+repeatStr2("ro","cc")
 
 /*
 6
@@ -100,8 +137,17 @@ Ex: multiOf(4,10,3); => 4000
 Ex: multiOf(6,3,2); => 54
 Ex: multiOf(6,2,3); => 48
 */
-
-
+function multiOf(num1,num2,num3)
+{
+    var mul=num2;
+    while(num3>1)
+    {
+        mul*=num2;
+        num3--;
+    }
+    return mul*num1;
+}
+multiOf(4,10,3);
 /*
 7
 Create a function called muti2
@@ -111,7 +157,18 @@ from the first number to the second number
 Ex: muti2(4, 5); => 4 * 5 => 20
 Ex: muti2(3, 6); => 3 * 4 * 5 * 6 => 360
 */
+function muti2(num1,num2)
+{
+var res=1;
+    while (num1<=num2)
+    {
+            res*=num1;
+            num1++
 
+    }
+return "mul(3,6) = "+res ;
+}
+muti2(3,6);
 
 /*
 8
@@ -124,7 +181,18 @@ and return the number between them
 numberBetweenUs(2,8) => "3, 4, 5, 6, 7"
 numberBetweenUs(1,3) => "2"
 */
-
+function  numberBetweenUs(num1,num2)
+{	num1++
+    var res=num1++;
+    while(num1<num2)
+    {
+        res+=", "+num1;
+        num1++;
+    }
+    return res;
+    
+}
+numberBetweenUs(2,8);
 
 /*
 9
@@ -143,6 +211,17 @@ countDown(2)
 countDown(7)
 => "7, 6, 5, 4, 3, 2, 1, done"
 */
+function countDown(parameter)
+{
+    var newStr=parameter;
+    while(parameter>1)
+    {
+        newStr+=","+(parameter-1);
+        parameter--;
+    }
+    return newStr+=", Done.";
+}
+countDown(2);
 
 /*
 10
@@ -154,7 +233,18 @@ multiplication2(5,4) => 20
 multiplication2(2,8) => 16
 multiplication2(7,6) =>  42
 */
+function multiplication2(num1,num2)
+{
+    var res=num1;
+    while(num2>1)
+    {
+        res+=num1;
+        num2--;
 
+    }
+    return ews
+}
+multiplication2(7,6)
 /*
 11
 Write a function called mod2
@@ -166,8 +256,15 @@ mod2(2,8) => 2
 mod2(7,4) => 3
 mod2(8,4) => 0
 */
-
-
+function mod2(num1,num2)
+{
+    while(num1>=num2)
+    num1=num1-num2;
+{
+}
+return num1
+}
+mod2(8,4)
 /*
 12
 Write a function called repeatChar
@@ -183,10 +280,24 @@ repeatChar("School","s") => 1
 try more case by yourself
 */
 
+function repeatChar(str,char)
+{
+        var newChar=char.toLowerCase();
+        var len=str.length-1;
+        var count=0;
 
+        while(len>=0)
+        {
+            if(str[len].toLowerCase()===newChar)
+            count++;
 
+            len--;
+        }
 
+        return count;
+}
 
+repeatChar("School","s");
 
 
 
@@ -266,7 +377,24 @@ repeatChar2("school","a") => 0
 repeatChar2("School","S") => 1
 try more case by yourself
 */
+function repeatChar2(str,char)
+{
+        
+        var len=str.length-1;
+        var count=0;
 
+        while(len>=0)
+        {
+            if(str[len]===char)
+            count++;
+
+            len--;
+        }
+
+        return count;
+}
+
+repeatChar2("School","a");
 
 /*
 5

@@ -70,10 +70,11 @@ fibon(n): 1 1 2 3 5 8 13 21
 n:        0 1 2 3 4 5  6  7
 */
 function fibon(number)
-	{if (number==0 || number==1) 
+	{
+		if (number==0 || number==1) 
 		{return 1;}
 
-	return fibon(number-1)+fibon(number-2);
+		return fibon(number-1)+fibon(number-2);
 	}
 	var x=window.prompt("Enter Number:");
 	fibon(Number(x));
